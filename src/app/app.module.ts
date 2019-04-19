@@ -1,26 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { TestElmComponent } from './test-elm/test-elm.component';
+import { WebComponentsModule } from './web-components/web-components.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    TestElmComponent,
+    AppComponent,
   ],
   imports: [
     BrowserModule,
+    WebComponentsModule,
   ],
   providers: [],
-  entryComponents: [
-    TestElmComponent,
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ],
+  bootstrap: [
+    AppComponent,
   ],
 })
-export class AppModule {
-  constructor(private injector: Injector) {
-    const testElm = createCustomElement(TestElmComponent, { injector });
-    customElements.define('test-elm', testElm);
-  }
-
-  ngDoBootstrap() { }
-}
+export class AppModule { }
