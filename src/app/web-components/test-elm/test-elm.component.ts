@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   // selector: 'app-test-elm',
   templateUrl: './test-elm.component.html',
   styleUrls: ['./test-elm.component.scss'],
-  encapsulation: ViewEncapsulation.Native,
+  // encapsulation: ViewEncapsulation.Native,
 })
 export class TestElmComponent implements OnInit {
 
