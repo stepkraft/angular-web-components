@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
@@ -8,8 +7,7 @@ import { TestElmComponent } from './test-elm/test-elm.component';
 
 @NgModule({
   imports: [
-    // CommonModule,
-    BrowserModule,
+    CommonModule,
   ],
   declarations: [
     TestElmComponent,
